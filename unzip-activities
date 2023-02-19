@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+# Goes through data folder and unzips all .gz files
+FILES_DIR="data/activities"
+
+cd "$FILES_DIR"
+for FILE in *.gz; do
+    echo -e "unzipping $FILE ...\n"
+    gzip -d "$FILE"
+done
